@@ -45,14 +45,14 @@ const authLink = setContext((_, { headers }) => {
   };
 }).concat(
   createUploadLink({
-    uri: "http://localhost:4123/graphql",
+    uri: "https://licobackv2-dev-hkra.2.us-1.fl0.io/graphql",
   })
 );
 //hola
 const wsLink = new GraphQLWsLink(
   createClient({
     webSocketImpl: WebSocket,
-    url: "ws://localhost:4123/graphql",
+    url: "wss://licobackv2-dev-hkra.2.us-1.fl0.io/graphql",
   })
 );
 
